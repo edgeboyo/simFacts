@@ -1,0 +1,19 @@
+import twitter
+
+
+class CredentialsManager():
+    def __init__(self):
+        self.consumer_key = 'PLACEHOLDER'
+        self.consumer_secret = 'PLACEHOLDER'
+        self.access_key = 'PLACEHOLDER'
+        self.access_secret = 'PLACEHOLDER'
+
+    def createValidAPI(self):
+        api = twitter.api(consumer_key=self.consumer_key,
+                          consumer_secret=self.consumer_secret,
+                          access_token_key=self.access_key,
+                          access_token_secret=self.access_secret)
+        if api.VerifyCredentials() == None:
+            raise Exception('Cannot verify credentials')
+
+        return api
