@@ -12,5 +12,9 @@ Change out all `PLACEHOLDER` values to your correct API keys from the developer 
 
 And then run
 ```bash
-python main.py
+python main.py fact_file.txt
 ```
+
+## Fact file structure
+
+**TODO**
