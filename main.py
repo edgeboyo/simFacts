@@ -18,7 +18,7 @@ def handleMessage(api, facts):
     attachment_url = None
     del facts[0]
 
-    if len(facts) > 0 and facts[0][0] == "#":
+    if len(facts) > 0 and len(facts[0]) > 0 and facts[0][0] == "#":
         attachment_url = facts[0][1:]
         del facts[0]
 
